@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rahul Tiwari | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body>
   <div class="container">
     <header class="main-header">
       <div class="header-content">
         <div class="header-left">
+          <img src="images/profile.jpg" alt="Rahul Tiwari" class="header-profile-pic">
           <h1 style="color: #fff; margin: 0;">Rahul Tiwari</h1>
         </div>
         <div class="header-right">
@@ -223,7 +225,7 @@
       var hamburger = document.querySelector('.hamburger');
       var contactIcons = document.querySelector('.contact-icons');
       function checkWidth() {
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 600) {
           hamburger.style.display = 'flex';
           contactIcons.style.display = 'none';
         } else {
