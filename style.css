@@ -221,7 +221,7 @@ ul {
     grid-column: auto;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .container {
     padding: 1.2rem 1rem;
   }
@@ -276,39 +276,64 @@ ul {
   .mobile-contact-label {
     display: inline;
   }
-} 
+}
 
 .app-card .app-screenshot[src$="walnut_axio.webp"] {
   object-position: center -35px;
-} 
+}
 
 .app-card .app-screenshot[src$="fedex_mobile.jpg"],
 .app-card .app-screenshot[src$="ninja_sales_pro.jpg"] {
   object-position: top;
-} 
+}
 
 .app-card .app-screenshot[src$="s_icd_programmer.jpg"] {
   flex-grow: 0;
   height: auto;
   max-width: 100%;
   width: 100%;
-} 
+}
 
 .app-card .app-screenshot[src$="ninja_sales_pro.jpg"] {
   object-position: bottom;
-} 
+}
 
 .contact-icons {
   display: flex;
   flex-direction: row;
   gap: 1em;
   align-items: center;
-} 
+}
 
 .mobile-contact-label {
   display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 450px) {
+  .main-header h1 {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+  .header-right {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hamburger {
+    display: flex !important;
+    margin-left: 0.5em;
+    color: #fff;
+  }
+  .contact-icons {
+    flex-direction: column;
+    gap: 0.5em;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 1em;
+    box-shadow: 0 2px 8px #0002;
+    border-radius: 10px;
+    padding: 0.7em 1em;
+    z-index: 100;
+  }
   .mobile-contact-label {
     display: inline;
   }
