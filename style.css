@@ -58,6 +58,58 @@ ul {
   padding: 0.3rem 0.8rem;
   border-radius: 1rem;
   font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.skills-list li:hover {
+  background: #d1e7ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skills-list li i {
+  font-size: 0.9rem;
+}
+
+/* Brand-specific icon colors */
+.skills-list li .fab.fa-android {
+  color: #3DDC84;
+}
+
+.skills-list li .fab.fa-java {
+  color: #ED8B00;
+}
+
+.skills-list li .fab.fa-google-play {
+  color: #01875F;
+}
+
+.skills-list li .fas.fa-fire {
+  color: #FFCA28;
+}
+
+.skills-list li .fab.fa-git-alt {
+  color: #F05032;
+}
+
+.skills-list li .fab.fa-jira {
+  color: #0052CC;
+}
+
+.skills-list li .fab.fa-js-square {
+  color: #F7DF1E;
+}
+
+.skills-list li .fab.fa-html5 {
+  color: #E34F26;
+}
+
+/* Default color for other icons */
+.skills-list li .fas {
+  color: #1a4fa0;
 }
 .work-entry {
   margin-bottom: 1.2rem;
