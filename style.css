@@ -83,6 +83,27 @@ ul {
   color: #ED8B00;
 }
 
+.skills-list li .kotlin-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.skills-list li .jetpack-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.skills-list li .compose-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
 .skills-list li .fab.fa-google-play {
   color: #01875F;
 }
@@ -106,6 +127,8 @@ ul {
 .skills-list li .fab.fa-html5 {
   color: #E34F26;
 }
+
+
 
 /* Default color for other icons */
 .skills-list li .fas {
