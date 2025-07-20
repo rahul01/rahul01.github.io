@@ -13,15 +13,15 @@
 }
 .dark-mode {
   --bg: #181a1b;
-  --text: #e3e6eb;
+  --text: #d1d5db;
   --chip-bg: #23272b;
   --chip-hover: #2c3136;
   --header-bg: #23272b;
-  --header-text: #fff;
+  --header-text: #e5e7eb;
   --card-bg: #23272b;
   --card-shadow: 0 2px 8px #0008;
   --border: #333a41;
-  --footer: #aaa;
+  --footer: #9ca3af;
 }
 html, body {
   background: var(--bg);
@@ -145,14 +145,9 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  transition: all 0.2s ease;
 }
 
-.skills-list li:hover {
-  background: #d1e7ff;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+/* Removed hover effect from skills chips */
 
 .skills-list li i {
   font-size: 0.9rem;
@@ -188,20 +183,57 @@ ul {
   vertical-align: middle;
 }
 
-.skills-list li .fab.fa-google-play {
-  color: #01875F;
+.skills-list li .play-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
-.skills-list li .fas.fa-fire {
-  color: #FFCA28;
+.skills-list li .firebase-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.skills-list li .upi-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .skills-list li .fab.fa-git-alt {
   color: #F05032;
 }
 
-.skills-list li .fab.fa-jira {
-  color: #0052CC;
+.skills-list li .jira-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.skills-list li .jenkins-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.skills-list li .gemini-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.skills-list li .copilot-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .skills-list li .fab.fa-js-square {
@@ -217,6 +249,14 @@ ul {
 /* Default color for other icons */
 .skills-list li .fas {
   color: #1a4fa0;
+}
+
+.skills-list li .fas.fa-layer-group {
+  color: #3DDC84;
+}
+
+.skills-list li .fas.fa-shield-alt {
+  color: #FBBC04;
 }
 .work-entry {
   margin-bottom: 1.2rem;
@@ -397,7 +437,7 @@ ul {
     grid-column: auto;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .container {
     padding: 0rem 1rem;
   }
@@ -481,7 +521,7 @@ ul {
 .mobile-contact-label {
   display: none;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .main-header h1 {
     font-size: 2rem;
     white-space: nowrap;
@@ -531,6 +571,57 @@ ul {
   display: inline-block;
 } 
 
+/* Contact link colors */
+#contact a {
+  color: #2563eb !important;
+}
+
 .dark-mode #contact a {
   color: #4ea1ff !important;
+}
+
+/* Floating Action Button for Dark Mode Toggle */
+.fab-dark-mode {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #333;
+  border: 2px solid #555;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.fab-dark-mode #dark-mode-icon {
+  transition: all 0.3s ease;
+}
+
+.fab-dark-mode:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fab-dark-mode:active {
+  transform: translateY(0);
+}
+
+/* Dark mode specific styles for FAB */
+.dark-mode .fab-dark-mode {
+  background: #fff;
+  border-color: #ddd;
+  color: #555;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .fab-dark-mode:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 } 

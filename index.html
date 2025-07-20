@@ -14,12 +14,9 @@
       <div class="header-content">
         <div class="header-left">
           <img src="images/profile.jpg" alt="Rahul Tiwari" class="header-profile-pic">
-          <h1 style="color: #fff; margin: 0;">Rahul Tiwari</h1>
+          <h1 style="color: var(--header-text); margin: 0;">Rahul Tiwari</h1>
         </div>
         <div class="header-right">
-          <button id="dark-mode-toggle" aria-label="Toggle dark mode" style="background:none; border:none; font-size:1.6rem; color:#fff; cursor:pointer; margin-right:1em;">
-            <i id="dark-mode-icon" class="far fa-moon"></i>
-          </button>
           <button class="hamburger" aria-label="Show contacts" style="display:none; background:none; border:none; font-size:2rem; color:#fff; cursor:pointer; align-items:center; justify-content:center;">
             &#9776;
           </button>
@@ -36,10 +33,19 @@
             <a href="https://x.com/m00nfish" target="_blank" class="header-icon" title="X (Twitter)">
               <img src="images/x.svg" alt="X (Twitter) icon">
             </a>
+            <a href="https://developers.google.com/profile/u/rahultiwari01" target="_blank" class="header-icon" title="Google Developer">
+              <img src="images/g.svg" alt="Google Developer icon">
+            </a>
           </div>
         </div>
       </div>
     </header>
+    
+    <!-- Floating Action Button for Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="fab-dark-mode" aria-label="Toggle dark mode">
+      <i id="dark-mode-icon" class="far fa-moon"></i>
+    </button>
+    
     <div style="max-width: 1100px; margin: 1.2em auto 0 auto; font-size: 1.15em;">
       Architect / Tech Lead with 15 years of experience specializing in designing, developing, and leading Android mobile application projects. Deep expertise in Android frameworks, architecture, and building high-impact apps for fintech, social media, healthcare, and consumer domains.
     </div>
@@ -120,26 +126,25 @@
             <li><img src="images/jetpack.svg" alt="Android Jetpack" class="jetpack-icon"> Android Jetpack</li>
             <li><img src="images/compose.svg" alt="Jetpack Compose" class="compose-icon"> Jetpack Compose</li>
             <li><i class="fab fa-android"></i> AOSP</li>
+            <li><i class="fab fa-js-square"></i> JavaScript</li>
+            <li><i class="fab fa-html5"></i> HTML</li>
             <li><i class="fas fa-sitemap"></i> MVVM</li>
             <li><i class="fas fa-sitemap"></i> MVP</li>
             <li><i class="fas fa-sitemap"></i> MVI</li>
             <li><i class="fas fa-layer-group"></i> Clean Architecture</li>
-            <li><i class="fab fa-google-play"></i> Play Store Deployment</li>
-            <li><i class="fas fa-fire"></i> Firebase</li>
-            <li><i class="fas fa-credit-card"></i> UPI Integration</li>
-            <li><i class="fas fa-wallet"></i> Mobile Payments</li>
+            <li><img src="images/play.svg" alt="Play Store" class="play-icon"> Play Store</li>
+            <li><img src="images/Firebase.svg" alt="Firebase" class="firebase-icon"> Firebase</li>
+            <li><img src="images/upi.svg" alt="UPI" class="upi-icon"> UPI Integration</li>
             <li><i class="fas fa-shield-alt"></i> Mobile Security</li>
             <li><i class="fab fa-git-alt"></i> GIT</li>
-            <li><i class="fab fa-jira"></i> Jira</li>
-            <li><i class="fas fa-server"></i> Jenkins</li>
+            <li><img src="images/jira.svg" alt="Jira" class="jira-icon"> Jira</li>
+            <li><img src="images/jenkins.svg" alt="Jenkins" class="jenkins-icon"> Jenkins</li>
             <li><i class="fas fa-sync-alt"></i> CI/CD</li>
             <li><i class="fas fa-users"></i> Agile / Scaled Agile</li>
-            <li><i class="fas fa-user-tie"></i> Team Leadership</li>
+            <li><i class="fas fa-user-tie"></i> Leading Teams</li>
             <li><i class="fas fa-chalkboard-teacher"></i> Mentoring & Training</li>
-            <li><i class="fab fa-js-square"></i> JavaScript</li>
-            <li><i class="fab fa-html5"></i> HTML</li>
-            <li><i class="fas fa-robot"></i> Gemini</li>
-            <li><i class="fas fa-robot"></i> Copilot</li>
+            <li><img src="images/gemini.svg" alt="Gemini" class="gemini-icon"> Gemini</li>
+            <li><img src="images/copilot-icon.svg" alt="Copilot" class="copilot-icon"> Copilot</li>
             <li><i class="fas fa-pencil-ruler"></i> Designing apps</li>
           </ul>
         </section>
@@ -208,19 +213,22 @@
     </div>
 
     <section class="section" id="contact" style="width:100%; max-width:1100px; margin: 2.5rem auto 0 auto;">
-      <div style="margin-top: 1em; font-size: 1em; color: #444; display: flex; flex-direction: row; align-items: center; gap: 2em; justify-content: center;">
+      <div style="margin-top: 1em; font-size: 1em; color: var(--text); display: flex; flex-direction: row; align-items: center; gap: 2em; justify-content: center;">
         <h2 class="mobile-contact-label">Contact Me:</h2>
-        <a href="mailto:rahultiwari01@outlook.com" style="color:#1a4fa0; display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
+        <a href="mailto:rahultiwari01@outlook.com" style="color:var(--text); display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
           <i class="fas fa-envelope contact-link-icon"></i> rahultiwari01@outlook.com
         </a>
-        <a href="https://www.linkedin.com/in/rahultiwari01" target="_blank" style="color:#1a4fa0; display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
+        <a href="https://www.linkedin.com/in/rahultiwari01" target="_blank" style="color:var(--text); display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
           <i class="fab fa-linkedin contact-link-icon"></i> LinkedIn
         </a>
-        <a href="https://stackoverflow.com/users/1529129/rahul-tiwari" target="_blank" style="color:#1a4fa0; display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
+        <a href="https://stackoverflow.com/users/1529129/rahul-tiwari" target="_blank" style="color:var(--text); display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
           <i class="fab fa-stack-overflow contact-link-icon"></i> Stack Overflow
         </a>
-        <a href="https://x.com/m00nfish" target="_blank" style="color:#1a4fa0; display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
+        <a href="https://x.com/m00nfish" target="_blank" style="color:var(--text); display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
           <i class="fab fa-x-twitter contact-link-icon"></i> X (Twitter)
+        </a>
+        <a href="https://developers.google.com/profile/u/rahultiwari01" target="_blank" style="color:var(--text); display: flex; align-items: center; gap: 0.4em; text-decoration: none;">
+          <i class="fab fa-google contact-link-icon"></i> Google Developer
         </a>
       </div>
     </section>
@@ -235,7 +243,7 @@
       var hamburger = document.querySelector('.hamburger');
       var contactIcons = document.querySelector('.contact-icons');
       function checkWidth() {
-        if (window.innerWidth <= 700) {
+        if (window.innerWidth <= 800) {
           hamburger.style.display = 'flex';
           contactIcons.style.display = 'none';
         } else {
@@ -259,7 +267,7 @@
       document.body.classList.toggle('dark-mode', enabled);
       var icon = document.getElementById('dark-mode-icon');
       if (enabled) {
-        icon.className = 'fas fa-sun';
+        icon.className = 'far fa-sun';
       } else {
         icon.className = 'far fa-moon';
       }
