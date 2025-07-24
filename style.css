@@ -139,7 +139,7 @@ ul {
 .skills-list, .highlights-list, .interests-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
+  gap: 0.7rem 0.7rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -633,79 +633,48 @@ ul {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 } 
 
-/* Other Projects grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.7rem;
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.7rem 0.7rem;
+  list-style: none;
   padding: 0;
-  margin-top: 0.5rem;
+  margin: 0;
 }
-
-.project-card-small {
-  background: var(--card-bg);
-  box-shadow: var(--card-shadow);
-  border: 1px solid var(--border);
-  transition: background 0.3s, box-shadow 0.3s, border 0.3s, transform 0.2s ease-in-out;
-  border-radius: 8px;
-  padding: 0.65rem 0.7rem;
-  font-size: 0.93rem;
-  line-height: 1.4;
-}
-
-.project-card-small:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.dark-mode .project-card-small:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.project-card-small strong {
+.project-chip {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: 0;
+  background: var(--chip-bg);
   color: var(--text);
-  font-weight: 600;
+  padding: 0.26rem 0.7rem;
+  border-radius: 7px; 
+  font-size: 0.98rem;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.25s;
+  position: relative;
+  border: 1.2px solid var(--border);
+  outline: none;
+  box-sizing: border-box;
 }
-
+.project-chip:hover, .project-chip:focus {
+  background: var(--chip-hover);
+  box-shadow: 0 2px 8px #0001;
+}
+.dark-mode .project-chip {
+  background: var(--chip-bg);
+  color: var(--text);
+}
+.project-chip strong {
+  font-weight: 600;
+  color: var(--text);
+}
 .project-desc {
   display: none;
   font-weight: normal;
   color: var(--text);
-}
-
-/* Make cards focusable for accessibility */
-.project-card-small {
-  cursor: pointer;
-  outline: none;
-}
-
-@media (max-width: 1200px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 900px) {
-  .main-grid {
-    grid-template-columns: 1fr;
-  }
-  .apps-grid {
-    grid-template-columns: 1fr;
-  }
-  .apps-staggered-grid {
-    grid-template-columns: 1fr;
-  }
-  .apps-staggered-grid .app-card-row2:nth-child(4),
-  .apps-staggered-grid .app-card-row2:nth-child(5) {
-    grid-column: auto;
-  }
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Balloon project modal styles */
@@ -734,23 +703,6 @@ ul {
   border-radius: 0;
   animation: none;
 }
-.modal-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.7rem;
-  font-size: 1.1rem;
-  color: var(--footer);
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-.modal-close:hover { color: var(--link); }
-.modal-title {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.32em;
-  color: var(--text);
-}
 .modal-desc {
   color: var(--text);
   font-size: 0.91rem;
@@ -773,6 +725,8 @@ ul {
 .dark-mode .project-modal {
   background: #28281a;
   color: var(--text);
+  border: 1.2px solid var(--border);
+  border-radius: 7px;
 }
 .dark-mode .project-modal::before {
   border-bottom: 12px solid #28281a;
