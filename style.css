@@ -659,6 +659,11 @@ ul {
   outline: none;
   box-sizing: border-box;
 }
+.project-chip i {
+  margin-right: 0.5em;
+  font-size: 1em;
+  flex-shrink: 0;
+}
 .project-chip:hover, .project-chip:focus {
   background: var(--chip-hover);
   box-shadow: 0 2px 8px #0001;
