@@ -632,3 +632,160 @@ ul {
 .dark-mode .fab-dark-mode:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 } 
+
+/* Other Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.7rem;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.project-card-small {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+  transition: background 0.3s, box-shadow 0.3s, border 0.3s, transform 0.2s ease-in-out;
+  border-radius: 8px;
+  padding: 0.65rem 0.7rem;
+  font-size: 0.93rem;
+  line-height: 1.4;
+}
+
+.project-card-small:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.dark-mode .project-card-small:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.project-card-small strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.project-desc {
+  display: none;
+  font-weight: normal;
+  color: var(--text);
+}
+
+/* Make cards focusable for accessibility */
+.project-card-small {
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+  .apps-staggered-grid {
+    grid-template-columns: 1fr;
+  }
+  .apps-staggered-grid .app-card-row2:nth-child(4),
+  .apps-staggered-grid .app-card-row2:nth-child(5) {
+    grid-column: auto;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Balloon project modal styles */
+.project-modal {
+  position: absolute;
+  z-index: 2000;
+  min-width: 260px;
+  max-width: 350px;
+  background: #fffbe6;
+  color: var(--text);
+  box-shadow: 0 4px 24px 2px rgba(0,0,0,.13);
+  border-radius: 14px;
+  padding: 1rem 1.2rem 0.8rem 1.2rem;
+  margin: 0;
+  animation: modalPop .18s cubic-bezier(.5,2.4,.7,.6);
+  outline: none;
+  display: none;
+}
+.project-modal[style*='block'] { display: block !important; }
+.modal-content {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  position: static;
+  border-radius: 0;
+  animation: none;
+}
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  font-size: 1.1rem;
+  color: var(--footer);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.modal-close:hover { color: var(--link); }
+.modal-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.32em;
+  color: var(--text);
+}
+.modal-desc {
+  color: var(--text);
+  font-size: 0.91rem;
+  word-break: break-word;
+  padding-bottom: 0.3rem;
+}
+/* Balloon arrow */
+.project-modal::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: -11px;
+  width: 0; height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 12px solid #fffbe6;
+  filter: drop-shadow(0 -3px 6px #0002);
+}
+
+.dark-mode .project-modal {
+  background: #28281a;
+  color: var(--text);
+}
+.dark-mode .project-modal::before {
+  border-bottom: 12px solid #28281a;
+}
+
+@media (max-width: 600px) {
+  .project-modal {
+    min-width: 70vw;
+    max-width: 99vw;
+    left: 6vw !important;
+    right: auto !important;
+  }
+  .project-modal::before {
+    left: 26px;
+  }
+}
