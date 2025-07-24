@@ -295,6 +295,7 @@
   <!-- Balloon modal for other-projects -->
   <div id="project-modal" class="project-modal" tabindex="-1" aria-modal="true"
        style="display:none; position: absolute;">
+    <span class="balloon-arrow"></span>
     <div class="modal-content" role="dialog">
       <div class="modal-title"></div>
       <div class="modal-desc"></div>
@@ -364,6 +365,7 @@
       function $all(s, p=document) { return p.querySelectorAll(s); }
       var modal = $('#project-modal');
       var modalDesc = modal.querySelector('.modal-desc');
+      var arrow = modal.querySelector('.balloon-arrow');
       let hideTimeout = null;
 
       function openModal(desc, targetCard) {
@@ -378,6 +380,13 @@
         if (left + modalW > window.innerWidth - 12) left = window.innerWidth - modalW - 12;
         modal.style.top = (rect.bottom + scrollTop + 7) + 'px';
         modal.style.left = left + 'px';
+        // --- Arrow alignment below ---
+        var chipCenter = rect.left + rect.width / 2;
+        var modalLeft = left;
+        var arrowLeft = chipCenter - modalLeft;
+        // Constrain arrow visually inside modal
+        var minArrow = 18, maxArrow = modalW-18;
+        arrow.style.left = Math.max(minArrow, Math.min(arrowLeft, maxArrow)) + 'px';
         // Remove outside handler if re-opening
         document.removeEventListener('mousedown', outsideHandler);
         setTimeout(function() {
