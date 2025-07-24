@@ -409,15 +409,30 @@
           if (hideTimeout) clearTimeout(hideTimeout);
           setBalloon();
         });
+        card.addEventListener('mousemove', function(e) {
+          if (hideTimeout) clearTimeout(hideTimeout);
+        });
         card.addEventListener('mouseleave', function(e) {
-          hideTimeout = setTimeout(closeModal, 80);
+          hideTimeout = setTimeout(function() {
+            // Only close if not hovering/focusing another chip
+            const active = document.activeElement;
+            if (!active || !active.classList || !active.classList.contains('project-chip')) closeModal();
+          }, 80);
         });
         card.addEventListener('focus', function(e){
+          if (hideTimeout) clearTimeout(hideTimeout);
           setBalloon();
         });
         card.addEventListener('blur', function(e){
-          hideTimeout = setTimeout(closeModal, 60);
+          hideTimeout = setTimeout(function() {
+            // Only close if not hovering/focusing another chip
+            const active = document.activeElement;
+            if (!active || !active.classList || !active.classList.contains('project-chip')) closeModal();
+          }, 60);
         });
+        card.addEventListener('touchstart', function(e) {
+          if (hideTimeout) clearTimeout(hideTimeout);
+        }, {passive: true});
         card.addEventListener('click', function(e) {
           e.stopPropagation();
           setBalloon();
