@@ -10,6 +10,7 @@
   --card-shadow: 0 2px 8px #0001;
   --border: #e0e0e0;
   --footer: #888;
+  --link:#2563eb;
 }
 .dark-mode {
   --bg: #181a1b;
@@ -22,6 +23,11 @@
   --card-shadow: 0 2px 8px #0008;
   --border: #333a41;
   --footer: #9ca3af;
+  --link:#4ea1ff;
+}
+
+.dark-mode .org a {
+  color: #4ea1ff !important;
 }
 html, body {
   background: var(--bg);
@@ -579,6 +585,7 @@ ul {
 .dark-mode #contact a {
   color: #4ea1ff !important;
 }
+
 
 /* Floating Action Button for Dark Mode Toggle */
 .fab-dark-mode {
