@@ -354,7 +354,7 @@ ul {
   grid-column: 1 / 3;
 }
 .apps-staggered-grid .app-card-row2:nth-child(5) {
-  grid-column: 3 / 5;
+  grid-column: 3 / 4;
 }
 .main-header {
   background: #374151;
